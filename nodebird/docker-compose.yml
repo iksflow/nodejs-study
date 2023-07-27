@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  node-mysql:
+    image: mysql:8.0.33
+    ports:
+      - "${MYSQL_PORT}:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+      MYSQL_USER: "${MYSQL_USER}"
+      MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
+    volumes:
+      - ./docker/init-scripts:/docker-entrypoint-initdb.d
+      - /var/tmp/docker/nodejs-mysql:/var/lib/mysql
