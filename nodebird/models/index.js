@@ -5,7 +5,7 @@ const User = require("./user");
 const Post = require("./post");
 const Hashtag = require("./hashtag");
 const db = {};
-let sequelize = new Sequelize(
+const sequelize = new Sequelize(
   config.database,
   config.username,
   config.password,
@@ -21,8 +21,8 @@ User.init(sequelize);
 Post.init(sequelize);
 Hashtag.init(sequelize);
 
-User.associate(sequelize);
-Post.associate(sequelize);
-Hashtag.associate(sequelize);
+User.associate(db);
+Post.associate(db);
+Hashtag.associate(db);
 
 module.exports = db;

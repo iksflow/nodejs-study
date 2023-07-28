@@ -71,6 +71,15 @@ $ npx sequelize db:create
 
 ```
 
+### 1.5. Passport 추가.
+
+로그인에 필요한 세션, 쿠키 처리를 도와주는 Passport를 설치한다.  
+아래 명령어를 실행하면 passport 디렉터리를 생성한다.
+
+```sh
+ $ npm i passport passport-local passport-kakao bcrypt
+```
+
 ## 2. 실행
 
 Node.js서버와 MySQL DB는 Docker 환경에서 구동되게 만들 예정
