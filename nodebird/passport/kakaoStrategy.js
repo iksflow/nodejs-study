@@ -1,5 +1,5 @@
 const passport = require("passport");
-const kakaoStrategy = require("passport-kakao").Strategy;
+const KakaoStrategy = require("passport-kakao").Strategy;
 
 const User = require("../models/user");
 
