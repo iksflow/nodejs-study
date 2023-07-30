@@ -80,6 +80,14 @@ $ npx sequelize db:create
  $ npm i passport passport-local passport-kakao bcrypt
 ```
 
+### 1.6. multer 추가
+
+멀티파트 형식의 이미지를 업로드하기 위해 multer 패키지를 설치한다.
+
+```sh
+$ npm i multer
+```
+
 ## 2. 실행
 
 Node.js서버와 MySQL DB는 Docker 환경에서 구동되게 만들 예정
