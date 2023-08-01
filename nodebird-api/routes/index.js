@@ -8,9 +8,10 @@ const router = express.Router();
 router.get("/", async (req, res, next) => {
   try {
     const user = await User.findOne({
-      where: { id: (req.user && req.user.id) || null },
-      incluide: { model: Domain },
+      where: { id: req.user?.id || null },
+      include: { model: Domain },
     });
+    console.log("user::", user);
     res.render("login", {
       user,
       domains: user && user.Domains,
